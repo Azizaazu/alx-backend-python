@@ -2,14 +2,14 @@
 """ annotated version of the safe_first_element function """
 
 
-from typing import Any, List, Union
+from typing import Any, Sequence, Union
 
 
-def safe_first_element(lst: List[Any]) -> Union[Any, None]:
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
     """
     Return the first element of the list if it exists, or None.
     Args:
-        lst (List[Any]): The input list.
+        lst (Sequence[Any]): The input list.
     Returns:
         Union[Any, None]: The first element of the list or None.
     """

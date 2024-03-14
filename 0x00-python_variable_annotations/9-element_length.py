@@ -2,17 +2,17 @@
 """ annotated version of the element_length function """
 
 
-from typing import List, Tuple
+from typing import Iterable, List, Sequence, Tuple
 
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
     Calculate the length of each element in the input list.
 
     Args:
-        lst (List[str]): The input list of strings.
+        lst (Iterable[Sequence]): The input list
 
     Returns:
-        List[Tuple[str, int]]: A list of tuples
+        List[Tuple[Sequence, int]]: A list of tuples
     """
     return [(i, len(i)) for i in lst]

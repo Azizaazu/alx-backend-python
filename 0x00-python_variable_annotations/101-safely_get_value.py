@@ -2,24 +2,17 @@
 """ Given the parameters and the return values"""
 
 
-from typing import Dict, TypeVar, Optional
+from typing import Any, TypeVar, Mapping, Union
 
 
-KT = TypeVar('KT')
-VT = TypeVar('VT')
+T = TypeVar('T')
+Res = Union[Any, T]
+Def = Union[T, None]
 
 
-def safely_get_value(dct: Dict[KT, VT], key: KT, default: Optional[VT] = None) -> Optional[VT]:
+def safely_get_value(dct: Mapping, key: Any, default: Def = None) -> Res:
     """
     Get the value associated with the key in the dictionary safely.
-
-    Args:
-        dct (Dict[KT, VT]): The input dictionary.
-        key (KT): The key to search for in the dictionary.
-        default (Optional[VT], optional): The default value to return.
-
-    Returns:
-        Optional[VT]: The value associated with the key, otherwise the default.
     """
     if key in dct:
         return dct[key]

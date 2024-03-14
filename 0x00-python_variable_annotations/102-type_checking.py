@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-""" validate the following piece of code and apply any necessary changes."""
+""" validate the following piece of code and apply any chg"""
 
-from typing import Tuple, Any
 
-def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> Tuple[Any, ...]:
-    zoomed_in: Tuple[Any, ...] = tuple(
+from typing import Tuple, List
+
+
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """ multiple copies """
+    zoomed_in: List = [
         item for item in lst
-        for i in range(factor)
-    )
+        for i in range(int(factor))
+        ]
     return zoomed_in
+
 
 array = (12, 72, 91)
 
