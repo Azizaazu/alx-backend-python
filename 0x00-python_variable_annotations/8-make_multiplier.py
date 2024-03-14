@@ -3,7 +3,9 @@
 Module for creating a multiplier function.
 """
 
+
 from typing import Callable
+
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
@@ -11,7 +13,7 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
     Args:
         multiplier (float): The multiplier value.
     Returns:
-        Callable[[float], float]: A function that takes a float and returns the product.
+        Callable[[float], float]: A function that takes a float
     """
     def multiplier_func(x: float) -> float:
         """
