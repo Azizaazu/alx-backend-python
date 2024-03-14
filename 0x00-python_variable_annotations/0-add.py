@@ -4,7 +4,7 @@ Module for adding two floats.
 """
 
 
-def add(a: float, b: float) -> float:
+def add(a: float, b: float):
     """
     Add two float numbers.
 
