@@ -8,8 +8,11 @@ using asyncio.gather and measures the total runtime.
 
 
 import asyncio
-from typing import List
-from async_comprehension import async_comprehension
+import time
+from importlib import import_module as using
+
+
+async_comprehension = using('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime() -> float:
@@ -18,7 +21,6 @@ async def measure_runtime() -> float:
     Returns:
         float: Total runtime in seconds.
     """
-    start_time = asyncio.get_running_loop().time()
+    start_time = time.time()
     await asyncio.gather(*(async_comprehension() for _ in range(4)))
-    end_time = asyncio.get_running_loop().time()
-    return end_time - start_time
+    return time_time() - start_time
